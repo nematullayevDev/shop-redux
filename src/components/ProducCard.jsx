@@ -6,14 +6,14 @@ import Typography from "@mui/material/Typography";
 import { IconButton } from "@mui/material";
 import { AddCard, AddShoppingCart } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
-
+import { addToCart } from "../redux/CartSlice";
 
 function ProductCard(product) {
   const { title, price, description, id, images } = product;
   const dispatch = useDispatch();
 
   const hendelAdd = () => {
-    dispatch(addToCart(product))
+    dispatch(addToCart(product));
   };
 
   return (
